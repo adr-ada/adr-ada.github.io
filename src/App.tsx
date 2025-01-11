@@ -4,13 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from './components/ui/button'
 import Header from '@/components/my-header'
+import { ThemeProvider } from "@/components/theme-provider"
+import ThemeSwitcher from './components/theme-switcher'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Header />
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        {<Header />}
+      </ThemeProvider>
     </>
   )
 }

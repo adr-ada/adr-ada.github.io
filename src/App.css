@@ -9,6 +9,25 @@
   text-align: center;
 }
 
+.dark {
+  --color-background: #000000;
+  --color-text: #ffffff;
+  --color-primary: #1a73e8;
+  --color-secondary: #ff5722;
+}
+
+.light {
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-primary: #1a73e8;
+  --color-secondary: #ff5722;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
