@@ -51,15 +51,16 @@ export function ModeToggle() {
                 <span className="sr-only">Toggle theme</span>
             </Button>*/}
 
-            <TooltipProvider>
+            {<TooltipProvider>
                 <Tooltip >
-                    <TooltipTrigger className="border border-transparent hover:white bg-transparent hover:bg-transparent focus-visible:bg-transparent">
-                        <Button variant="outline" size="icon" onClick={toggleTheme} className="border border-transparent hover:white bg-transparent hover:bg-transparent focus-visible:bg-transparent">
-                            {theme === "dark" ? (
-                                <Sun className="h-[1.2rem] w-[1.2rem] transition-all border border-transparent hover:white bg-transparent hover:bg-transparent focus-visible:bg-transparent" />
-                            ) : (
-                                <Moon className="h-[1.2rem] w-[1.2rem] transition-all border border-transparent hover:transparent bg-transparent hover:bg-transparent focus-visible:bg-transparent" />
-                            )}
+                    <TooltipTrigger className="border border-transparent hover:border-transparent bg-transparent hover:bg-transparent focus-visible:bg-transparent">
+                        <Button
+                            variant="ghost"
+                            className="group/toggle h-8 w-8 px-0 hover:bg-zinc-200 border border-transparent hover:border-transparent"
+                            onClick={toggleTheme}
+                        >
+                            <Sun className="hidden [html.dark_&]:block" />
+                            <Moon className="hidden [html.light_&]:block" />
                             <span className="sr-only">Toggle theme</span>
                         </Button>
                     </TooltipTrigger>
@@ -67,7 +68,7 @@ export function ModeToggle() {
                         {theme === "dark" ? <p>Let there be light!</p> : <p>Turn it off!</p>}
                     </TooltipContent>
                 </Tooltip>
-            </TooltipProvider>
+            </TooltipProvider>}
         </>
     )
 }

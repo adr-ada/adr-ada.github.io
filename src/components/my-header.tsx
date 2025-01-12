@@ -27,10 +27,10 @@ const Header = () => {
                             <p>test</p>
                         </div>
                         <nav className="flex items-center gap-0.5">
-                            <Button variant="ghost" size="icon" className="h-8 w-8 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-transparent focus-visible:bg-transparent" onClick={openGithub}>
+                            <Button variant="ghost" size="icon" className="h-8 w-8 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-zinc-200 focus-visible:bg-transparent" onClick={openGithub}>
                                 <Github />
                             </Button>
-                            <Button variant="ghost" size="icon" className="h-8 w-8 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-transparent focus-visible:bg-transparent" onClick={openLinkedin}>
+                            <Button variant="ghost" size="icon" className="h-8 w-8 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-zinc-200 focus-visible:bg-transparent" onClick={openLinkedin}>
                                 <Linkedin />
                             </Button>
                             <ModeToggle />
