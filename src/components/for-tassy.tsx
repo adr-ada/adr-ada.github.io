@@ -4,7 +4,7 @@ const Tassy = () => {
     return (
         <>
             <Link to="/tassyspage">
-                <Button>For Tassy's eyes only !!!</Button>
+                <Button variant="destructive">For Tassy's eyes only !!!</Button>
             </Link>
         </>
     )
