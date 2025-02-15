@@ -1,10 +1,10 @@
-import React from 'react';
-import { Button } from './components/ui/button';
+
 import cat0 from './assets/87f375d0f795803940a0c4e1f2f3e2be.gif'
 import cat1 from './assets/pa-ti-bb.gif';
 import cat2 from './assets/30731df1cdd458e17e2146a90d7c6b7c.gif'
 import cat3 from './assets/giphy.gif'
 import yay from './assets/yay-kitty.gif'
+import sadcat from './assets/cat-sad.gif'
 import { useState } from 'react';
 
 const TassysPage = () => {
@@ -25,7 +25,7 @@ const TassysPage = () => {
             setTitle("I didn't think you were gonna fold this quickly");
             setShowYayMessage(true);
         } else {
-            setTitle("YAYYY !!! I LOVE YOU")
+            setTitle("YAYYY !!! I LOVE YOU !!!")
         }
         setImageSrc(yay)
         //setImageSrc(cat2); // Change the image when Yes is clicked
@@ -35,23 +35,37 @@ const TassysPage = () => {
         setnoClickCount(noclickCount + 1);
         setClickCount(clickCount + 1);
         updateImage(clickCount + 1)
+        updateText(noclickCount + 1)
         //setNoText(noText + "!");
         //setImageSrc(cat2); // Change the image when No is clicked
     };
 
-    const updateImage = (count) => {
+    const updateText = (count: number) => {
+        if (count === 1) {
+            setNoText("r u sure?");
+        } else if (count === 2) {
+            setNoText("rly sure?");
+        } else {
+            setNoText("last chance");
+        }
+    }
+    const updateImage = (count: number) => {
         if (count === 1) {
             setImageSrc(cat2);
         } else if (count === 2) {
             setImageSrc(cat3);
-        } else {
+        } else if (count === 3) {
             setImageSrc(cat1);
+        }
+        else {
+            setImageSrc(sadcat)
+            setTitle(":(")
         }
     };
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">
             {title}
-            {showYayMessage && <h2>YAYYY !!! I LOVE YOU</h2>}
+            {showYayMessage && <h2>YAYYY !!! I LOVE YOU !!!</h2>}
             <div className="flex justify-center py-8">
                 <img src={imageSrc} alt="cat" className="max-w-60 h-auto" />
             </div>

@@ -1,14 +1,6 @@
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
+
 import { Button } from "./ui/button";
 import { Github, Linkedin } from "lucide-react"
-import ThemeSwitcher from "./theme-switcher"
 import { ModeToggle } from "./mode-toggle";
 const Header = () => {
     const openGithub = () => {
