@@ -4,6 +4,18 @@ import Header from '@/components/my-header'
 import { ThemeProvider } from "@/components/theme-provider"
 import Tassy from './components/for-tassy';
 import TassysPage from './tassyspage';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
+import Projects from './projects';
+
 function App() {
 
   return (
@@ -22,10 +34,13 @@ function MainContent() {
 
   return (
     <>
-      {showHeader && <Header />}
+      <div className="sticky top-0">{showHeader && <Header />}</div>
       <Routes>
-        {/* <Route path="/website" element={<Tassy />} /> */}
-        <Route path="/tassyspage" element={<TassysPage />} />
+        <>
+          {<Route path="/website" element={<main />} />}
+          {<Route path="/projects" element={<Projects />} />}
+          {/* <Route path="/tassyspage" element={<TassysPage />} /> */}
+        </>
       </Routes>
     </>
   );
