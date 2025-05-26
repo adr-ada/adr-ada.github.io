@@ -11,18 +11,15 @@ const Header = () => {
     const openLinkedin = () => {
         window.open("https://www.linkedin.com/in/adriel-adasa/", "_blank");
     }
-    const openProjects = () => {
-
-    }
     return (
         <>
-            <header className="sticky top-0 border-grid z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <header className="sticky top-0 border-grid z-50 w-full border-b">
                 <div className="container flex h-14 items-center justify-between">
                     {/* Align the text to the left */}
                     <h1 className="text-5xl flex-shrink-0">Adriel Adasa</h1>
                     <nav className="flex items-center gap-2">
                         <Link to="/main">
-                            <Button variant="ghost" size="icon" className="h-8 w-16 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-zinc-200 focus-visible:bg-transparent">
+                            <Button variant="ghost" size="icon" className="h-8 w-16 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-zinc-200 focus-visible:bg-transparent text-white">
                                 Home
                             </Button>
                         </Link>
