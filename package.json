@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "homepage": "https://adr-ada.github.io/website/",
+  "homepage": "https://adr-ada.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

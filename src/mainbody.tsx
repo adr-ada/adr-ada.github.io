@@ -40,9 +40,9 @@ const MainBody = () => {
                 <div className="max-w-2xl text-left">
                     {education.map((educ) => (
                         <>
-                            <p className="text-sm text-neutral-300 pt-6">{educ.dates}</p>
+                            <p className="text-sm text-neutral-500 dark:text-neutral-300 pt-6">{educ.dates}</p>
                             <p><span className="font-bold">{educ.name}, {educ.location}</span> - {educ.major}</p>
-                            <p className="text-xs text-neutral-300">{educ.bonus}</p>
+                            <p className="text-xs text-neutral-500 dark:text-neutral-300">{educ.bonus}</p>
                         </>
                     ))}
                 </div>
