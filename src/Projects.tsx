@@ -1,13 +1,11 @@
-
-import { useState } from 'react';
 import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+
 const Projects = () => {
     const projectList = [
         { id: 1, name: "Spotify Insights", description: "This is the first project." },
@@ -32,20 +30,20 @@ const Projects = () => {
         //     </ul>
         // </div>
         <div className="flex flex-col">
-            <h1 className="text-3xl font-bold">My Projects</h1>
-            <div className="px-20 flex flex-col">
+            <h1 className="text-3xl font-bold py-10">My Projects</h1>
+            <div className="px-20 flex justify-center flex-wrap gap-6">
                 {projectList.map((project) => (
-                    <Card className="w-80" key={project.id}>
-                        <CardHeader>{project.name}</CardHeader>
+                    <Card className="w-1/4 h-40" key={project.id}>
+                        <CardHeader><CardTitle className="text-3xl font-bold">{project.name}</CardTitle></CardHeader>
                         <CardDescription></CardDescription>
                         <CardContent>{project.description}</CardContent>
                     </Card>
                 ))}
-                <Card className="w-80">
+                {/* <Card className="w-80">
                     <CardHeader className="text-3xl font-bold">Project 1</CardHeader>
                     <CardDescription>Project 1 description</CardDescription>
                     <CardContent>the content</CardContent>
-                </Card>
+                </Card> */}
             </div>
         </div>
     );

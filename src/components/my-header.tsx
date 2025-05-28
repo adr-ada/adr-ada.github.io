@@ -50,11 +50,11 @@ const Header = () => {
                 <div className="flex flex-1 h-14 items-center justify-between">
                     <h1 className="text-3xl font-bold">Adriel Adasa</h1>
                     <nav className="flex items-center gap-0.5">
-                        <Link to="/website">
+                        <Link to="/">
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className={`h-8 w-16 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-zinc-200 focus-visible:bg-transparent ${location.pathname === "/website"
+                                className={`h-8 w-16 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-zinc-200 focus-visible:bg-transparent ${location.pathname === "/"
                                     ? "text-black dark:text-white"
                                     : "text-neutral-400"
                                     }`}
