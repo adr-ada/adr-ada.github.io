@@ -1,9 +1,12 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Header from '@/components/my-header'
 import { ThemeProvider } from "@/components/theme-provider"
-import Tassy from './components/for-tassy';
-import TassysPage from './tassyspage';
+// import Tassy from './components/for-tassy';
+// import TassysPage from './tassyspage';
+import Projects from './Projects';
+import MainBody from './mainbody';
+
 function App() {
 
   return (
@@ -17,15 +20,16 @@ function App() {
   )
 }
 function MainContent() {
-  const location = useLocation();
-  const showHeader = location.pathname !== '/tassyspage';
 
   return (
     <>
-      {showHeader && <Header />}
+      <div className="sticky top-0">
+        <Header />
+      </div>
       <Routes>
-        {/* <Route path="/website" element={<Tassy />} /> */}
-        <Route path="/tassyspage" element={<TassysPage />} />
+        {<Route path="/" element={<MainBody />} />}
+        {<Route path="/projects" element={<Projects />} />}
+        {/* {<Route path="/TassysPage" element={<TassysPage />} />} */}
       </Routes>
     </>
   );
