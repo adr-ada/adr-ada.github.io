@@ -10,11 +10,15 @@ import {
 } from "@/components/ui/card"
 const Projects = () => {
     const projectList = [
-        { id: 1, name: "Project 1", description: "This is the first project." },
-        { id: 2, name: "Project 2", description: "This is the second project." },
-        { id: 3, name: "Project 3", description: "This is the third project." },
+        { id: 1, name: "Spotify Insights", description: "This is the first project." },
+        { id: 2, name: "PriceHunt", description: "This is the second project." },
+        { id: 3, name: "Emergency Dashboard", description: "This is the third project." },
+        { id: 4, name: "MadJack", description: "This is the fourth project." },
+        { id: 5, name: "DestroyerX", description: "This is the fifth project." },
     ];
 
+    // https://github.com/wesbos/hot-tips/tree/main/remix-ticket
+    // https://github.com/simeydotme/pokemon-cards-css
     return (
         // <div className="top-0 flex flex-col items-center justify-center min-h-screen">
         //     <h1 className="text-3xl font-bold mb-6">My Projects</h1>
@@ -29,7 +33,14 @@ const Projects = () => {
         // </div>
         <div className="flex flex-col">
             <h1 className="text-3xl font-bold">My Projects</h1>
-            <div className="px-20">
+            <div className="px-20 flex flex-col">
+                {projectList.map((project) => (
+                    <Card className="w-80" key={project.id}>
+                        <CardHeader>{project.name}</CardHeader>
+                        <CardDescription></CardDescription>
+                        <CardContent>{project.description}</CardContent>
+                    </Card>
+                ))}
                 <Card className="w-80">
                     <CardHeader className="text-3xl font-bold">Project 1</CardHeader>
                     <CardDescription>Project 1 description</CardDescription>
