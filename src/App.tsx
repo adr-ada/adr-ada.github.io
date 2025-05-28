@@ -4,6 +4,8 @@ import Header from '@/components/my-header'
 import { ThemeProvider } from "@/components/theme-provider"
 import Tassy from './components/for-tassy';
 import TassysPage from './tassyspage';
+import Projects from './Projects';
+import MainBody from './mainbody';
 function App() {
 
   return (
@@ -17,15 +19,15 @@ function App() {
   )
 }
 function MainContent() {
-  const location = useLocation();
-  const showHeader = location.pathname !== '/tassyspage';
 
   return (
     <>
-      {showHeader && <Header />}
+      <div className="sticky top-0">
+        <Header />
+      </div>
       <Routes>
-        {/* <Route path="/website" element={<Tassy />} /> */}
-        <Route path="/tassyspage" element={<TassysPage />} />
+        {<Route path="/website" element={<MainBody />} />}
+        {<Route path="/projects" element={<Projects />} />}
       </Routes>
     </>
   );
