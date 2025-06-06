@@ -33,7 +33,7 @@ const Projects = () => {
             <h1 className="text-3xl font-bold py-10">My Projects</h1>
             <div className="px-20 flex justify-center flex-wrap gap-6">
                 {projectList.map((project) => (
-                    <Card className="w-1/4 h-40" key={project.id}>
+                    <Card className="w-1/4 h-72" key={project.id}>
                         <CardHeader><CardTitle className="text-3xl font-bold">{project.name}</CardTitle></CardHeader>
                         <CardDescription></CardDescription>
                         <CardContent>{project.description}</CardContent>
