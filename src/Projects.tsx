@@ -8,11 +8,11 @@ import {
 
 const Projects = () => {
     const projectList = [
-        { id: 1, name: "Spotify Insights", description: "This is the first project." },
-        { id: 2, name: "PriceHunt", description: "This is the second project." },
-        { id: 3, name: "Emergency Dashboard", description: "This is the third project." },
-        { id: 4, name: "MadJack", description: "This is the fourth project." },
-        { id: 5, name: "DestroyerX", description: "This is the fifth project." },
+        { id: 1, name: "Spotify Insights", description: "Designed and built an interactive web application to summarize users' Spotify data, providing personalized insight into their listening habits. Integrated the Spotify API to fetch real-time data. Built a mini player to enhance user engagement." },
+        { id: 2, name: "PriceHunt", description: "Worked in a group of 5 to develop a full-stack android application, enabling users to save and compare prices of various items. Designed a user-friendly interface. Implemented a hybrid backend using Java and Kotlin. Incorporated Agile practices to promote iterative and incremental development." },
+        { id: 3, name: "Emergency Dashboard", description: "Build a Reach-based web application to simluate an emergency communication system, with a focus on frontend development. Collaborated with a group of 5 members, using GIT for version control and conducting code reviews to maintain high-quality development standards. Utilized the DOM for efficient local data management. Deployed the application using Vercel. " },
+        { id: 4, name: "MadJack", description: "Collaborated in a group of 4 to create a black jack web game for Mountain Madness 2025 hackathon. Handled game implementation with JavaScript. Adopted Extreme Programming practices for rapid and efficient development. " },
+        { id: 5, name: "DestroyerX", description: "Led a team of 4 novice developers to design a 2-D space-themed game in Unity for FallHacks 2024 hackathon. Mentored the group in Unity and Git. Managed version control using GitHub to ensure continous collaboration" },
     ];
 
     // https://github.com/wesbos/hot-tips/tree/main/remix-ticket

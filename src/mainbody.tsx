@@ -7,17 +7,25 @@ import {
 } from "@/components/ui/carousel"
 import {
     Card,
-    // CardContent,
-    // CardDescription,
+    CardContent,
+    CardDescription,
     // CardFooter,
-    // CardHeader,
-    // CardTitle,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card"
 
 const MainBody = () => {
     const education = [
         { id: 1, name: "Simon Fraser University", location: "Burnaby", major: "Computing Science", dates: "January 2024 - Present", bonus: "" },
         { id: 2, name: "Kwantlen Polytechnic University", location: "Surrey", major: "Undeclared Business Major", dates: "January 2023 - December 2023", bonus: "3.98 GPA" },
+    ];
+
+    const projectList = [
+        { id: 1, name: "Spotify Insights", description: "An interactive web application summarizing users' Spotify Data, complete with built in mini player" },
+        { id: 2, name: "PriceHunt", description: "Full-stack Android application to save and compare prices of various items" },
+        { id: 3, name: "Emergency Dashboard", description: "React-based web application that simulates an emergency dashboard" },
+        { id: 4, name: "MadJack", description: "Blackjack web game, created for Mountain Madness 2025 hackathon" },
+        { id: 5, name: "DestroyerX", description: "2D space themed Unity game, created for FallHacks 2024 Hackathon" },
     ];
     return (
         <>
@@ -48,14 +56,20 @@ const MainBody = () => {
                 </div>
             </div>
             <div>
-                <h1 className="text-3xl font-bold">
+                <h1 className="text-3xl font-bold py-10">
                     Projects at a glance
                 </h1>
                 <Carousel className="w-full max-w-xl mx-auto px-10">
                     <CarouselContent>
-                        <CarouselItem><Card>1</Card></CarouselItem>
-                        <CarouselItem><Card>1</Card></CarouselItem>
-                        <CarouselItem><Card>1</Card></CarouselItem>
+                        {projectList.map((project) => (
+                            <CarouselItem>
+                                <Card className="h-72" key={project.id}>
+                                    <CardHeader><CardTitle className="text-3xl font-bold">{project.name}</CardTitle></CardHeader>
+                                    <CardDescription></CardDescription>
+                                    <CardContent>{project.description}</CardContent>
+                                </Card>
+                            </CarouselItem>
+                        ))}
                     </CarouselContent>
                     <CarouselPrevious />
                     <CarouselNext />
