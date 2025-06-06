@@ -30,7 +30,7 @@ const MainBody = () => {
     return (
         <>
             <div className="flex flex-col items-start ml-[33%] py-10">
-                <h1 className="text-3xl font-bold">
+                <h1 className="text-3xl font-bold pb-5">
                     About Me
                 </h1>
                 <p className="max-w-2xl text-left">Hi, I am a third-year student at Simon Fraser University majoring in Computing Science.</p>
