@@ -34,12 +34,6 @@ const MainBody = () => {
                     About Me
                 </h1>
                 <p className="max-w-2xl text-left">Hi, I am a third-year student at Simon Fraser University majoring in Computing Science.</p>
-                {/* <Card className="w-[700px] h-20">
-                    <CardHeader>
-                        <CardTitle>About Me</CardTitle>
-                    </CardHeader>
-                    <CardContent>hi</CardContent>
-                </Card> */}
             </div>
             <div className="flex flex-col items-start ml-[33%]">
                 <h1 className="text-3xl font-bold">
