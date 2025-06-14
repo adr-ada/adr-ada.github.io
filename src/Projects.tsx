@@ -20,9 +20,9 @@ const Projects = () => {
     return (
         <div className="flex flex-col">
             <h1 className="text-3xl font-bold py-10">My Projects</h1>
-            <div className="px-20 flex justify-center flex-wrap gap-6 items-stretch">
+            <div className="px-20 flex justify-center flex-wrap gap-6">
                 {projectList.map((project) => (
-                    <Card className="min-w-1/4 w-1/4 min-h-72 h-fit flex flex-col" key={project.id}>
+                    <Card className="min-w-min md:w-1/4 min-h-72 h-fit" key={project.id}>
                         <CardHeader><CardTitle className="text-3xl font-bold">{project.name}</CardTitle></CardHeader>
                         <CardDescription></CardDescription>
                         <CardContent>{project.description}</CardContent>
