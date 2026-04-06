@@ -8,7 +8,7 @@ import sadcat from './assets/cat-sad.gif'
 import { useState } from 'react';
 
 const Newpage = () => {
-    const [title, setTitle] = useState("Will you be my valentine?");
+    const [title, setTitle] = useState("Will you be my really late valentine?");
     const [yesText, setYesText] = useState("Yes !");
     const [noText, setNoText] = useState("no");
     const [imageSrc, setImageSrc] = useState(cat0);
@@ -25,7 +25,7 @@ const Newpage = () => {
             setTitle("I didn't think you were gonna fold this quickly");
             setShowYayMessage(true);
         } else {
-            setTitle("YAYYY !!! I LOVE YOU !!!")
+            setTitle("YAY !!! I LOVE YOU SO MUCH !!!")
         }
         setImageSrc(yay)
         //setImageSrc(cat2); // Change the image when Yes is clicked
