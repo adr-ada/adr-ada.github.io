@@ -7,7 +7,7 @@ import yay from './assets/yay-kitty.gif'
 import sadcat from './assets/cat-sad.gif'
 import { useState } from 'react';
 
-const TassysPage = () => {
+const Newpage = () => {
     const [title, setTitle] = useState("Will you be my valentine?");
     const [yesText, setYesText] = useState("Yes !");
     const [noText, setNoText] = useState("no");
@@ -89,4 +89,4 @@ const TassysPage = () => {
     );
 }
 
-export default TassysPage;
+export default Newpage;

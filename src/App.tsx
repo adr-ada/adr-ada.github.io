@@ -2,8 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Header from '@/components/my-header'
 import { ThemeProvider } from "@/components/theme-provider"
-// import Tassy from './components/for-tassy';
-// import TassysPage from './tassyspage';
+import Newpage from './newpage';
 import Projects from './Projects';
 import MainBody from './mainbody';
 
@@ -27,9 +26,9 @@ function MainContent() {
         <Header />
       </div>
       <Routes>
-        {<Route path="/" element={<MainBody />} />}
+        {<Route path="/" element={<><MainBody /></>} />}
         {<Route path="/projects" element={<Projects />} />}
-        {/* {<Route path="/TassysPage" element={<TassysPage />} />} */}
+        {<Route path="/newpage" element={<Newpage />} />}
       </Routes>
     </>
   );

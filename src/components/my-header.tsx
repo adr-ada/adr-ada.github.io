@@ -2,6 +2,7 @@
 import { Button } from "./ui/button";
 import { Github, Linkedin } from "lucide-react"
 import { ModeToggle } from "./mode-toggle";
+import Rachael from "./newpage";
 
 import { Link, useLocation } from 'react-router-dom'
 
@@ -46,6 +47,7 @@ const Header = () => {
                         <Button variant="ghost" size="icon" className="h-8 w-8 px-0 border border-transparent hover:border-transparent bg-transparent hover:bg-zinc-200 focus-visible:bg-transparent" onClick={openLinkedin}>
                             <Linkedin />
                         </Button>
+                        <Rachael />
                         <ModeToggle />
                     </nav>
                 </div>
